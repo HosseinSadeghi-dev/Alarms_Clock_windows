@@ -23,7 +23,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_timer">
       <attribute name="title">
@@ -227,7 +227,7 @@
         <string>Pause</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="btn_stopwatch_stop">
+      <widget class="QPushButton" name="btn_stopwatch_reset">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -243,7 +243,7 @@
         <string notr="true">border: 0px; border-radius: 30px; background-color: #000; color: #fff;</string>
        </property>
        <property name="text">
-        <string>Stop</string>
+        <string>Reset</string>
        </property>
       </widget>
       <widget class="QLabel" name="lbl_stopwatch">
