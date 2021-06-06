@@ -73,6 +73,10 @@ class Timer(QThread):
         self.h = self.ui.timer_h.value()
         self.m = self.ui.timer_m.value()
         self.s = self.ui.timer_s.value()
+        self.f_h = self.ui.timer_h.value()
+        self.f_m = self.ui.timer_m.value()
+        self.f_s = self.ui.timer_s.value()
+
         self.toast = ToastNotifier()
 
         self.ui.btn_timer_start.clicked.connect(self.start_timer)
@@ -80,13 +84,13 @@ class Timer(QThread):
         self.ui.btn_timer_reset.clicked.connect(self.stop)
 
     def reset(self):
-        self.h = 0
-        self.m = 0
-        self.s = 0
+        self.h = self.f_h
+        self.m = self.f_m
+        self.s = self.f_s
 
-        self.ui.timer_h.setValue(0)
-        self.ui.timer_m.setValue(0)
-        self.ui.timer_s.setValue(0)
+        self.ui.timer_h.setValue(self.f_h)
+        self.ui.timer_m.setValue(self.f_m)
+        self.ui.timer_s.setValue(self.f_s)
 
     def decrease(self):
 
@@ -137,6 +141,9 @@ class Timer(QThread):
         self.h = self.ui.timer_h.value()
         self.m = self.ui.timer_m.value()
         self.s = self.ui.timer_s.value()
+        self.f_h = self.ui.timer_h.value()
+        self.f_m = self.ui.timer_m.value()
+        self.f_s = self.ui.timer_s.value()
         self.start()
 
 
