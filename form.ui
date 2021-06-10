@@ -189,7 +189,7 @@
         <rect>
          <x>160</x>
          <y>100</y>
-         <width>91</width>
+         <width>101</width>
          <height>71</height>
         </rect>
        </property>
@@ -214,9 +214,9 @@
       <widget class="QSpinBox" name="alarm_h">
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>40</x>
          <y>100</y>
-         <width>91</width>
+         <width>101</width>
          <height>71</height>
         </rect>
        </property>
@@ -259,9 +259,9 @@
       <widget class="QSpinBox" name="alarm_s">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>280</x>
          <y>100</y>
-         <width>91</width>
+         <width>101</width>
          <height>71</height>
         </rect>
        </property>
@@ -325,7 +325,7 @@
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>260</x>
          <y>80</y>
          <width>16</width>
          <height>101</height>
