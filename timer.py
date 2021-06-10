@@ -30,6 +30,10 @@ class Timer(QThread):
         self.ui.timer_m.setValue(self.f_m)
         self.ui.timer_s.setValue(self.f_s)
 
+        self.ui.timer_h.setReadOnly(False)
+        self.ui.timer_m.setReadOnly(False)
+        self.ui.timer_s.setReadOnly(False)
+
     def decrease(self):
 
         self.s = int(self.s)
@@ -47,6 +51,9 @@ class Timer(QThread):
 
     def run(self):
         while int(self.s) >= 0 and int(self.m) >= 0 and int(self.h) >= 0:
+            self.ui.timer_h.setReadOnly(True)
+            self.ui.timer_m.setReadOnly(True)
+            self.ui.timer_s.setReadOnly(True)
             if int(self.s) == 0 and int(self.m) == 0 and int(self.h) == 0:
                 break
             self.decrease()
@@ -67,6 +74,7 @@ class Timer(QThread):
         if int(self.s) == 0 and int(self.m) == 0 and int(self.h) == 0:
             self.toast.show_toast("Timer Done", "Timer That You Set Is Done",
                                   duration=20, icon_path="assets/icons/icon.ico")
+            self.reset()
 
     def pause(self):
         self.terminate()

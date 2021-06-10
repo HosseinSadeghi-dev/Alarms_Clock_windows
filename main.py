@@ -3,6 +3,7 @@ from PySide6 import QtGui
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtUiTools import QUiLoader
 
+from alarm import Alarm
 from stopwatch import StopWatch
 from timer import Timer
 
@@ -15,6 +16,7 @@ class Main(QWidget):
 
         self.stopwatch = StopWatch(self.ui)
         self.timer = Timer(self.ui)
+        self.alarm = Alarm(self.ui)
 
         self.ui.setWindowIcon(QtGui.QIcon('assets/icons/icon.png'))
         self.ui.show()
